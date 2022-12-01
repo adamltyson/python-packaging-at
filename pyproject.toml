@@ -1,0 +1,16 @@
+[project]
+name = "python-packaging-at"
+authors = [{name = "Adam Tyson", email= "code@adamltyson.com"}]
+description = "Example of how to package Python projects"
+readme = "README.md"
+requires-python = ">=3.8.0"
+dynamic = ["version"]
+
+license = {text = "BSD-3-Clause"}
+
+[build-system]
+requires = [
+    "setuptools>=45",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
