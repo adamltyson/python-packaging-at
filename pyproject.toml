@@ -25,5 +25,25 @@ build-backend = "setuptools.build_meta"
 dev = [
     "pytest",
      "setuptools_scm",
-    "flake8"
+    "flake8",
+    "black"
 ]
+
+[tool.black]
+target-version = ['py38', 'py39', 'py310']
+skip-string-normalization = false
+line-length = 79
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | _build
+    | build
+    | dist
+  )/
+)
+'''
+
