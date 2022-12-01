@@ -43,8 +43,8 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref_type == 'tag'
-      steps:
+    if: contains(github.ref, 'tags')
+    steps:
       - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v1
