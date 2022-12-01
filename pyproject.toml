@@ -26,7 +26,8 @@ dev = [
     "pytest",
      "setuptools_scm",
     "flake8",
-    "black"
+    "black",
+    "pre-commit",
 ]
 
 [tool.black]
